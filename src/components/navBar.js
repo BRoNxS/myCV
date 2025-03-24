@@ -1,6 +1,6 @@
 import { FiUser, FiBriefcase, FiPhone, FiFile } from "react-icons/fi";
 import { useState } from "react";
-import logo from "../assets/logo2.png";
+import logo from "../assets/logo.png";
 import "../styles/global.css";
 
 const NavBar = () => {
@@ -48,7 +48,7 @@ const NavBar = () => {
                     src={logo}
                     alt="Logo"
                     className="h-24 w-24 cursor-pointer transition-transform duration-700 ease-in-out"
-                    style={{ transform: isHovered ? "rotate(0deg)" : "rotate(-180deg)" }}
+                    style={{ transform: isHovered ? "rotate(-177deg)" : "rotate(3deg)" }}
                 />
             </div>
         </nav>

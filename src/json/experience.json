@@ -1,0 +1,42 @@
+[
+
+  {
+    "year": "2021",
+    "month": "August",
+    "text": "Entrei na ePharma como Front-End Web Developer. As minhas stacks tecnologicas são:",
+    "technologies": [
+      { "name": "JavaScript", "logo": "/icons/js.svg" },
+      { "name": "HTML", "logo": "/icons/html.svg" },
+      { "name": "CSS", "logo": "/icons/css.svg" },
+      { "name": "JQuery", "logo": "/icons/jquery.svg" }
+    ]
+  },
+  {
+    "year": "2022",
+    "month": "June",
+    "text": "Adicionei Java (básico) ao meu stack.",
+    "technologies": [
+      { "name": "Java", "logo": "/icons/java.svg" }
+    ]
+  },
+  {
+    "year": "2023",
+    "month": "December",
+    "text": "Alterei para outro projeto em Angular",
+    "technologies": [
+      { "name": "Angular", "logo": "/icons/angular.svg" }
+    ]
+  },
+  {
+    "year": "2024",
+    "month": "June",
+    "text": "Retornei ao primeiro projeto. Com as stacks tecnológicas:",
+    "technologies": [
+      { "name": "JavaScript", "logo": "/icons/js.svg" },
+      { "name": "HTML", "logo": "/icons/html.svg" },
+      { "name": "CSS", "logo": "/icons/css.svg" },
+      { "name": "JQuery", "logo": "/icons/jquery.svg" },
+      { "name": "Java", "logo": "/icons/java.svg" }
+    ]
+  }
+]

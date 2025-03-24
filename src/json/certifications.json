@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "Angular - The Complete Guide (2025 Edition)",
+    "imageKey": "angular",
+    "description": "Curso completo de Angular cobrindo desde os fundamentos até tópicos avançados.",
+    "downloadLink": "/documents/Angular - The Complete Guide (2025 Edition).pdf"
+  },
+  {
+    "id": 2,
+    "title": "Curso completo em Cyber Security",
+    "imageKey": "cybersecurity",
+    "description": "Curso intensivo abordando segurança da informação e proteção contra ataques cibernéticos.",
+    "downloadLink": "/documents/Curso completo em Cyber Security.pdf"
+  },
+  {
+    "id": 3,
+    "title": "Learn Complete Front-End Web Development",
+    "imageKey": "frontEnd",
+    "description": "Curso abrangente de desenvolvimento front-end com HTML, CSS e JavaScript.",
+    "downloadLink": "/documents/Learn Complete Front-End Web Development.pdf"
+  },
+  {
+    "id": 4,
+    "title": "React Native: Advanced Concepts",
+    "imageKey": "reactNative",
+    "description": "Curso avançado de React Native cobrindo navegação e integração com APIs.",
+    "downloadLink": "/documents/React Native - Advanced Concepts.pdf"
+  },
+  {
+    "id": 5,
+    "title": "Prototipagem para Web & Design de Interação",
+    "imageKey": "uiux",
+    "description": "Curso focado em design de interfaces e experiência do utilizador.",
+    "downloadLink": "/documents/Prototipagem para Web & Design de Interação.pdf"
+  }
+]
