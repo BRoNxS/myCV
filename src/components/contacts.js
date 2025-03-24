@@ -18,7 +18,6 @@ const ContactsContent = () => {
     }, []);
 
 
-    // Limpa mensagens de erro após 5s
     useEffect(() => {
         if (Object.values(errors).some(err => err !== "")) {
             const timeout = setTimeout(() => {
@@ -28,13 +27,12 @@ const ContactsContent = () => {
         }
     }, [errors]);
 
-// Limpa status de envio (success/error) após 5s
- /*   useEffect(() => {
+    useEffect(() => {
         if (status) {
             const timeout = setTimeout(() => setStatus(null), 5000);
             return () => clearTimeout(timeout);
         }
-    }, [status]);*/
+    }, [status]);
 
 
     const handleChange = (e) => {
@@ -54,8 +52,6 @@ const ContactsContent = () => {
             email: formData.email.trim() === "" ? "Email is required." : "",
             message: formData.message.trim() === "" ? "Message is required." : "",
         };
-
-
         setErrors(newErrors);
 
         const hasErrors = Object.values(newErrors).some((error) => error !== "");
@@ -86,11 +82,9 @@ const ContactsContent = () => {
             className="relative w-full flex flex-col items-center justify-center min-h-screen font-montserrat bg-black"
         >
             <div className="w-full max-w-5xl flex flex-col md:flex-row gap-10 p-6">
-                {/* Formulário */}
                 <form onSubmit={handleSubmit} className="relative w-full md:w-2/3 shadow-xl p-6">
                     <div className="flex w-full gap-10">
                         <div className="w-1/2 flex flex-col gap-4">
-                            {/* Name */}
                             <div className="relative flex flex-col min-h-[80px]">
                                 <div className="flex items-center h-16 border-b border-gray-500 focus-within:border-white">
                                     <FiUser className={`mr-2 ${focusedField === "name" ? "text-white" : "text-gray-400"}`} />
@@ -110,7 +104,6 @@ const ContactsContent = () => {
                                 )}
                             </div>
 
-                            {/* Email */}
                             <div className="relative flex flex-col min-h-[80px]">
                                 <div className="flex items-center h-16 border-b border-gray-500 focus-within:border-white">
                                     <FiMail className={`mr-2 ${focusedField === "email" ? "text-white" : "text-gray-400"}`} />
@@ -131,7 +124,6 @@ const ContactsContent = () => {
                             </div>
                         </div>
 
-                        {/* Message */}
                         <div className="relative flex flex-col min-h-[100px] w-1/2">
                             <div className="flex items-start h-40 border-b border-gray-500 focus-within:border-white pt-6">
                                 <FiMessageSquare className={`mr-2 mt-1 ${focusedField === "message" ? "text-white" : "text-gray-400"}`} />
@@ -152,7 +144,6 @@ const ContactsContent = () => {
                         </div>
                     </div>
 
-                    {/* Feedback de envio */}
                     {status === "success" && (
                         <p className="absolute text-green-400 text-sm top-[60%] mt-2">
                             Message sent successfully!
@@ -175,10 +166,8 @@ const ContactsContent = () => {
                     </div>
                 </form>
 
-                {/* Linha vertical */}
                 <div className="w-px bg-gradient-to-b from-[#00BFFF] to-[#20C997]" />
 
-                {/* Contacto e CV */}
                 <div className="w-full md:w-1/3 p-6 rounded-2xl flex flex-col justify-center items-center text-center min-h-[200px]">
                     <div className="flex-1 flex flex-col justify-center items-center gap-4">
                         <div className="flex items-center gap-2">

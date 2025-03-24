@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import profilePic from "../assets/profilePic.jpg";
 
-// Variants
 const imageVariants = {
     hidden: { opacity: 0, scale: 0.5 },
     visible: {
@@ -55,7 +54,6 @@ const AboutMeContent = () => {
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
             >
-                {/* Imagem animada */}
                 <motion.div variants={imageVariants}>
                     <div className="p-[3px] rounded-full bg-gradient-to-r from-[#00BFFF] to-[#20C997]">
                         <div className="rounded-full overflow-hidden bg-black">
@@ -68,7 +66,6 @@ const AboutMeContent = () => {
                     </div>
                 </motion.div>
 
-                {/* Texto animado */}
                 <motion.h2
                     variants={textVariants}
                     className="text-3xl md:text-5xl text-white mt-6 font-montserrat font-light"
