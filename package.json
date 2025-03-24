@@ -2,7 +2,7 @@
   "name": "mycv",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://BRoNxS.github.io/mycv",
+  "homepage": "https://BRoNxS.github.io/myCV",
   "dependencies": {
     "cra-template": "1.2.0",
     "emailjs-com": "^3.2.0",
