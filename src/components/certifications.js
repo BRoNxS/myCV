@@ -134,7 +134,7 @@ const CertificationsContent = () => {
                 <div
                     className="relative mt-6 p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] w-fit transition-all duration-300">
                     <a
-                        href={selectedCert.downloadLink}
+                        href={`${process.env.PUBLIC_URL}${selectedCert.downloadLink}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center text-white rounded-md bg-black p-2 transition-all duration-300 hover:bg-black/80"

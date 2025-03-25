@@ -180,9 +180,8 @@ const ContactsContent = () => {
                     </div>
 
                     <div className="mt-10 p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] w-fit text-sm">
-                        <a
-                            href={`${process.env.PUBLIC_URL}/documents/CV_Bruno_EN.pdf`}
-                            target="_blank"
+                        <a href={`${process.env.PUBLIC_URL}/documents/CV_Bruno_EN.pdf`}
+                        target="_blank"
                             rel="noopener noreferrer"
                             className="relative text-white bg-black rounded-md px-6 py-3 flex items-center gap-2 hover:bg-black/80 transition duration-300 ease-in-out text-m"
                         >
