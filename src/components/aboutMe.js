@@ -47,10 +47,10 @@ const AboutMeContent = () => {
         <div
             ref={ref}
             id="aboutMeContent"
-            className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black px-4 py-10"
+            className="relative w-full min-h-screen flex flex-col items-center justify-center bg-black px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:py-20"
         >
             <motion.div
-                className="flex flex-col items-center text-center max-w-3xl w-full"
+                className="flex flex-col items-center text-center max-w-xl sm:max-w-2xl md:max-w-3xl w-full"
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
             >
@@ -60,7 +60,7 @@ const AboutMeContent = () => {
                             <img
                                 src={profilePic}
                                 alt="Profile Picture"
-                                className="w-40 h-40 md:w-60 md:h-60 rounded-full object-cover"
+                                className="w-32 h-32 sm:w-40 sm:h-40 md:w-60 md:h-60 rounded-full object-cover"
                             />
                         </div>
                     </div>
@@ -68,14 +68,14 @@ const AboutMeContent = () => {
 
                 <motion.h2
                     variants={textVariants}
-                    className="text-3xl md:text-5xl text-white mt-6 font-montserrat font-light"
+                    className="text-2xl sm:text-3xl md:text-5xl text-white mt-6 font-montserrat font-light"
                 >
                     Bruno Santos, 26
                 </motion.h2>
 
                 <motion.p
                     variants={textVariants}
-                    className="mt-6 text-lg text-gray-300 font-montserrat font-light leading-relaxed"
+                    className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 font-montserrat font-light leading-relaxed px-2 sm:px-4"
                 >
                     I’m a Computer Engineering student at the School of Technology and Management in Bragança,
                     passionate about innovation and continuous learning. I thrive on challenges, quickly adapt to new
