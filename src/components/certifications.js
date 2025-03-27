@@ -93,7 +93,7 @@ const CertificationsContent = () => {
                     transition={{ duration: 0.5 }}
                 >
                     <div className="absolute inset-0 h-px bg-gradient-to-r from-[#00BFFF] to-[#20C997]" />
-                    <div className="bg-black px-3 py-1 z-10 -translate-y-3 relative rounded-xl min-h-[40px] flex items-center justify-center">
+                    <div className="bg-black px-3 py-1 z-10 -translate-y-8 relative rounded-xl min-h-[40px] flex items-center justify-center">
                         <span className="text-white font-montserrat text-base sm:text-lg md:text-xl">
                             {selectedCert?.title || "placeholder"}
                         </span>
