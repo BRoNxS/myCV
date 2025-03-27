@@ -89,10 +89,10 @@ const ProfessionalExperienceContent = () => {
                             animate="animate"
                             variants={animations.fadeInUp(index * 0.2)}
                         >
-                            <p className="text-lg font-bold mb-3 text-center">
+                            <p className="text-lg font-bold mb-5 text-center">
                                 {exp.month ? `${exp.month} ${exp.year}` : exp.year}
                             </p>
-                            <div className="flex flex-wrap justify-center gap-4 mb-4">
+                            <div className="flex flex-wrap justify-center gap-4 mb-10">
                                 {exp.technologies.map((tech, idx) => (
                                     <div key={idx} className="flex flex-col items-center w-10 h-10">
                                         <img src={techIcons[tech.name]} alt={tech.name} className="w-full h-full object-contain" />
@@ -113,7 +113,7 @@ const ProfessionalExperienceContent = () => {
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.5 }}
                         >
-                            Clique nas bolinhas para ver os detalhes
+                            Click on the dots to view the details.
                         </motion.p>
                     )}
 

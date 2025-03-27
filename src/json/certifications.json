@@ -1,37 +1,37 @@
 [
   {
     "id": 1,
-    "title": "Angular - The Complete Guide (2025 Edition)",
-    "imageKey": "angular",
-    "description": "Curso completo de Angular cobrindo desde os fundamentos até tópicos avançados.",
-    "downloadLink": "/documents/Angular - The Complete Guide (2025 Edition).pdf"
-  },
-  {
-    "id": 2,
-    "title": "Curso completo em Cyber Security",
-    "imageKey": "cybersecurity",
-    "description": "Curso intensivo abordando segurança da informação e proteção contra ataques cibernéticos.",
-    "downloadLink": "/documents/Curso completo em Cyber Security.pdf"
-  },
-  {
-    "id": 3,
     "title": "Learn Complete Front-End Web Development",
     "imageKey": "frontEnd",
-    "description": "Curso abrangente de desenvolvimento front-end com HTML, CSS e JavaScript.",
+    "description": "From scratch to advanced HTML, CSS, and JavaScript. Includes responsive design, DOM manipulation, and an intro to frameworks. Solid course to kickstart a front-end dev career.",
     "downloadLink": "/documents/Learn Complete Front-End Web Development.pdf"
   },
   {
-    "id": 4,
+    "id": 2,
     "title": "React Native: Advanced Concepts",
     "imageKey": "reactNative",
-    "description": "Curso avançado de React Native cobrindo navegação e integração com APIs.",
+    "description": "Meant for those who already know the basics. Teaches advanced navigation, API integration, state management (Redux, Context), animations, and performance tweaks.",
     "downloadLink": "/documents/React Native - Advanced Concepts.pdf"
   },
   {
+    "id": 3,
+    "title": "Complete Cyber Security Course",
+    "imageKey": "cybersecurity",
+    "description": "Covers key areas like encryption, firewalls, vulnerability analysis, social engineering, and protection against DDoS, phishing, etc. Good for beginners or anyone looking to level up in cybersecurity.",
+    "downloadLink": "/documents/Curso completo em Cyber Security.pdf"
+  },
+  {
+    "id": 4,
+    "title": "Angular - The Complete Guide (2025 Edition)",
+    "imageKey": "angular",
+    "description": "Covers everything from basics (components, data binding) to advanced stuff like routing, reactive forms, lazy loading, and deployment. Perfect if you're planning to build serious Angular apps.",
+    "downloadLink": "/documents/Angular - The Complete Guide (2025 Edition).pdf"
+  },
+  {
     "id": 5,
-    "title": "Prototipagem para Web & Design de Interação",
+    "title": "Prototyping for Web & Interaction Design",
     "imageKey": "uiux",
-    "description": "Curso focado em design de interfaces e experiência do utilizador.",
+    "description": "UI/UX focused. Teaches how to create functional prototypes, test usability, apply interaction design principles, and use tools like Figma or Adobe XD. Great for designing interfaces that actually work.",
     "downloadLink": "/documents/Prototipagem para Web & Design de Interação.pdf"
   }
 ]

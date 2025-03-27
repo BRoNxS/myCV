@@ -77,9 +77,11 @@ const AboutMeContent = () => {
                     variants={textVariants}
                     className="mt-6 sm:mt-8 md:mt-10 text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-montserrat font-light leading-relaxed px-4 md:px-8"
                 >
-                    I’m a Computer Engineering student at the School of Technology and Management in Bragança,
-                    passionate about innovation and continuous learning. I thrive on challenges, quickly adapt to new
-                    technologies, and always aim to deliver efficient and creative solutions.
+                    I'm a Computer Engineering student at the School of Technology and Management in Bragança, with a real passion for learning, especially when it comes to programming. I'm always curious to explore new technologies, whether it's diving into a new language, building personal projects, or just figuring out better ways to solve problems.
+
+                    Outside of the tech world, I try to keep things balanced. I work out regularly to stay active and clear my mind, and I’m a big fan of TV series and video games, great ways to unwind and also keep the brain sharp. Spending time with my family and friends is something I really value; they keep me grounded and motivated.
+
+                    Overall, I’m someone who’s always looking to improve, stay curious, and take on new challenges—both in tech and in life.
                 </motion.p>
             </motion.div>
         </div>

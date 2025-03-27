@@ -3,7 +3,7 @@
   {
     "year": "2021",
     "month": "August",
-    "text": "Entrei na ePharma como Front-End Web Developer. As minhas stacks tecnologicas são:",
+    "text": "I joined ePharma as a Front-End Web Developer, where I work primarily with technologies such as JavaScript, jQuery, HTML, and CSS. My role involves developing and maintaining user interfaces, ensuring responsive design, and contributing to the overall user experience with clean, efficient, and maintainable code.",
     "technologies": [
       { "name": "JavaScript", "logo": "/icons/js.svg" },
       { "name": "HTML", "logo": "/icons/html.svg" },
@@ -14,7 +14,7 @@
   {
     "year": "2022",
     "month": "June",
-    "text": "Adicionei Java (básico) ao meu stack.",
+    "text": "In 2022, I added basic Java to my tech stack, which already included JavaScript, jQuery, HTML and CSS.",
     "technologies": [
       { "name": "Java", "logo": "/icons/java.svg" }
     ]
@@ -22,7 +22,7 @@
   {
     "year": "2023",
     "month": "December",
-    "text": "Alterei para outro projeto em Angular",
+    "text": "I transitioned to another project using Angular, where I applied the Scrum methodology through Azure DevOps and used Git for version control.",
     "technologies": [
       { "name": "Angular", "logo": "/icons/angular.svg" }
     ]
@@ -30,7 +30,7 @@
   {
     "year": "2024",
     "month": "June",
-    "text": "Retornei ao primeiro projeto. Com as stacks tecnológicas:",
+    "text": "I returned to the initial project, working with a tech stack that includes JavaScript, jQuery, Java (basic), HTML and CSS . I also use Wrike for task and time management within a Scrum-based workflow, and continued using Git for version control.",
     "technologies": [
       { "name": "JavaScript", "logo": "/icons/js.svg" },
       { "name": "HTML", "logo": "/icons/html.svg" },
