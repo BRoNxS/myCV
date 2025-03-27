@@ -155,7 +155,7 @@ const ContactsContent = () => {
                     )}
 
                     {/* Submit button */}
-                    <div className="relative mt-8 p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] w-fit mx-auto">
+                    <div className="relative mt-12 p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] w-fit mx-auto">
                         <button
                             type="submit"
                             className="relative text-white bg-black rounded-md px-6 py-3 hover:bg-black/80 transition duration-300 ease-in-out text-sm sm:text-base"
