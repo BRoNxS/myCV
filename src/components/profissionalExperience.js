@@ -121,7 +121,7 @@ const ProfessionalExperienceContent = () => {
                         <AnimatePresence>
                             {isTimelineVisible && (
                                 <motion.div
-                                    className="absolute left-1/2 w-[1px] bg-gradient-to-b from-transparent via-white to-white transform -translate-x-1/2 z-10 top-0 bottom-0"
+                                    className="absolute left-1/2 w-[1px] bg-gradient-to-b from-white/10 via-white/90 to-white transform -translate-x-1/2 z-10 top-0 bottom-0"
                                     initial={{ height: 0 }}
                                     animate={{ height: "100%" }}
                                     exit={{ height: 0 }}

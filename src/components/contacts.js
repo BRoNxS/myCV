@@ -85,8 +85,10 @@ const ContactsContent = () => {
                         {/* Name & Email */}
                         <div className="w-full md:w-1/2 flex flex-col gap-4">
                             <div className="relative flex flex-col min-h-[80px]">
-                                <div className="flex items-center h-14 border-b border-gray-500 focus-within:border-white">
-                                    <FiUser className={`mr-2 ${focusedField === "name" ? "text-white" : "text-gray-400"}`} />
+                                <div
+                                    className="flex items-center h-14 border-b border-gray-500 focus-within:border-white">
+                                    <FiUser
+                                        className={`mr-2 ${focusedField === "name" ? "text-white" : "text-gray-400"}`}/>
                                     <input
                                         type="text"
                                         name="name"
@@ -104,8 +106,10 @@ const ContactsContent = () => {
                             </div>
 
                             <div className="relative flex flex-col min-h-[80px]">
-                                <div className="flex items-center h-14 border-b border-gray-500 focus-within:border-white">
-                                    <FiMail className={`mr-2 ${focusedField === "email" ? "text-white" : "text-gray-400"}`} />
+                                <div
+                                    className="flex items-center h-14 border-b border-gray-500 focus-within:border-white">
+                                    <FiMail
+                                        className={`mr-2 ${focusedField === "email" ? "text-white" : "text-gray-400"}`}/>
                                     <input
                                         type="email"
                                         name="email"
@@ -125,8 +129,10 @@ const ContactsContent = () => {
 
                         {/* Message */}
                         <div className="relative flex flex-col min-h-[100px] w-full md:w-1/2">
-                            <div className="flex items-start h-[150px] border-b border-gray-500 focus-within:border-white pt-4">
-                                <FiMessageSquare className={`mr-2 mt-1 ${focusedField === "message" ? "text-white" : "text-gray-400"}`} />
+                            <div
+                                className="flex items-start h-[150px] border-b border-gray-500 focus-within:border-white pt-4">
+                                <FiMessageSquare
+                                    className={`mr-2 mt-1 ${focusedField === "message" ? "text-white" : "text-gray-400"}`}/>
                                 <textarea
                                     name="message"
                                     value={formData.message}
@@ -155,7 +161,8 @@ const ContactsContent = () => {
                     )}
 
                     {/* Submit button */}
-                    <div className="relative mt-12 p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] w-fit mx-auto">
+                    <div
+                        className="relative mt-12 p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] w-fit mx-auto sm:mx-0 sm:ml-auto">
                         <button
                             type="submit"
                             className="relative text-white bg-black rounded-md px-6 py-3 hover:bg-black/80 transition duration-300 ease-in-out text-sm sm:text-base"
@@ -163,13 +170,15 @@ const ContactsContent = () => {
                             Send Message
                         </button>
                     </div>
+
                 </form>
 
                 {/* Separator line for desktop */}
-                <div className="hidden md:block w-px bg-gradient-to-b from-[#00BFFF] to-[#20C997]" />
+                <div className="hidden md:block w-px bg-gradient-to-b from-[#00BFFF] to-[#20C997]"/>
 
                 {/* Contact Info */}
-                <div className="w-full md:w-1/3 p-4 sm:p-6 rounded-2xl flex flex-col justify-center items-center text-center min-h-[200px]">
+                <div
+                    className="w-full md:w-1/3 p-4 sm:p-6 rounded-2xl flex flex-col justify-center items-center text-center min-h-[200px]">
                     <div className="flex-1 flex flex-col justify-center items-center gap-4">
                         <div className="flex items-center gap-2">
                             <FiPhone className="text-white text-xl" />
