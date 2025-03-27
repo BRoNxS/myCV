@@ -68,14 +68,14 @@ const AboutMeContent = () => {
 
                 <motion.h2
                     variants={textVariants}
-                    className="text-2xl sm:text-3xl md:text-5xl text-white mt-6 font-montserrat font-light"
+                    className="text-2xl sm:text-3xl md:text-5xl text-white mt-10 font-montserrat font-light"
                 >
                     Bruno Santos, 26
                 </motion.h2>
 
                 <motion.p
                     variants={textVariants}
-                    className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 font-montserrat font-light leading-relaxed px-2 sm:px-4"
+                    className="mt-6 sm:mt-8 md:mt-10 text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-montserrat font-light leading-relaxed px-4 md:px-8"
                 >
                     I’m a Computer Engineering student at the School of Technology and Management in Bragança,
                     passionate about innovation and continuous learning. I thrive on challenges, quickly adapt to new
