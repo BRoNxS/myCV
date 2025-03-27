@@ -95,20 +95,20 @@ const CertificationsContent = () => {
                     <div className="absolute inset-0 h-px bg-gradient-to-r from-[#00BFFF] to-[#20C997]" />
                     <div className="bg-black px-3 py-1 z-10 -translate-y-8 relative rounded-xl min-h-[40px] flex items-center justify-center">
                         <span className="text-white font-montserrat text-base sm:text-lg md:text-xl">
-                            {selectedCert?.title || "placeholder"}
+                            {selectedCert?.title}
                         </span>
                     </div>
                 </motion.div>
 
                 <motion.div
-                    key={`desc-${selectedCert?.id || "placeholder"}`}
+                    key={`desc-${selectedCert?.id}`}
                     className="relative rounded-2xl shadow-lg max-w-5xl w-full text-center px-4 min-h-[100px]"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: certsAnimated ? 1 : 0, y: certsAnimated ? 0 : 20 }}
                     transition={{ duration: 0.5, delay: 0.1 }}
                 >
                     <p className="text-white text-base sm:text-lg leading-relaxed font-montserrat">
-                        {selectedCert?.description || "placeholder"}
+                        {selectedCert?.description}
                     </p>
                 </motion.div>
 
