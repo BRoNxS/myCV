@@ -87,7 +87,7 @@ const CertificationsContent = () => {
                 </div>
 
                 <motion.div
-                    className="w-full max-w-7xl my-6 relative flex items-center justify-center mt-20 px-4 min-h-[64px]"
+                    className="w-full max-w-7xl relative flex items-center justify-center mt-20 px-4 min-h-[64px]"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: certsAnimated ? 1 : 0, y: certsAnimated ? 0 : 20 }}
                     transition={{ duration: 0.5 }}
