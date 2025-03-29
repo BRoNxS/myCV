@@ -81,7 +81,7 @@ const ProfessionalExperienceContent = () => {
         <div ref={sectionRef} id="professionalExperienceContent" className="relative flex flex-col items-center min-h-screen bg-black text-white p-6 w-full">
             {typeof window !== "undefined" && window.innerWidth < 768 ? (
                 <div className="flex flex-col gap-5 w-full max-w-sm">
-                    {[...experiences].reverse().map((exp, index) => (
+                    {[...experiences].map((exp, index) => (
                         <motion.div
                             key={index}
                             className="bg-zinc-950 p-4 rounded-xl shadow-lg w-full"
@@ -121,7 +121,7 @@ const ProfessionalExperienceContent = () => {
                         <AnimatePresence>
                             {isTimelineVisible && (
                                 <motion.div
-                                    className="absolute left-1/2 w-[1px] bg-gradient-to-b from-white/10 via-white/90 to-white transform -translate-x-1/2 z-10 top-0 bottom-0"
+                                    className="absolute left-1/2 w-[1px] bg-gradient-to-b from-white via-white/90 to-white/10 transform -translate-x-1/2 z-10 top-0 bottom-0"
                                     initial={{ height: 0 }}
                                     animate={{ height: "100%" }}
                                     exit={{ height: 0 }}
@@ -130,7 +130,7 @@ const ProfessionalExperienceContent = () => {
                             )}
                         </AnimatePresence>
 
-                        {[...experiences].reverse().map((exp, index) => {
+                        {[...experiences].map((exp, index) => {
                             const isLeft = index % 2 === 0;
                             const isActive = selectedIndex === index;
 

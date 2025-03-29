@@ -141,11 +141,11 @@ const ContactsContent = () => {
                                     onBlur={handleBlur}
                                     placeholder="Your message"
                                     rows="4"
-                                    className="w-full bg-transparent text-white outline-none placeholder-gray-500 h-full text-sm sm:text-base"
-                                ></textarea>
+                                    className="w-full bg-transparent text-white outline-none placeholder-gray-500 h-full text-sm sm:text-base resize-none"
+                                />
                             </div>
                             {errors.message && (
-                                <p className="absolute text-red-500 text-sm mt-1 top-[160px]">{errors.message}</p>
+                                <p className="absolute text-red-500 text-sm mt-1 top-[155px]">{errors.message}</p>
                             )}
                         </div>
                     </div>

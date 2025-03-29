@@ -70,19 +70,16 @@ const AboutMeContent = () => {
                     variants={textVariants}
                     className="text-2xl sm:text-3xl md:text-5xl text-white mt-10 font-montserrat font-light"
                 >
-                    Bruno Santos, 26
+                    Bruno Santos
                 </motion.h2>
 
                 <motion.p
                     variants={textVariants}
                     className="mt-6 sm:mt-8 md:mt-10 text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-montserrat font-light leading-relaxed px-4 md:px-8"
                 >
-                    I'm a Computer Engineering student at the School of Technology and Management in Bragança, with a real passion for learning, especially when it comes to programming. I'm always curious to explore new technologies, whether it's diving into a new language, building personal projects, or just figuring out better ways to solve problems.
+                    I'm currently studying Computer Engineering at ESTiG and since 2021 I've been working as a Front-End Developer at ePharma. Most of my work revolves around JavaScript, jQuery, HTML and CSS. Along the way, I picked up some basic Java and even worked on a project with Angular. I've been in an Agile environment (Scrum) from the start, using Azure DevOps and Git pretty much every day.
 
-                    Outside of the tech world, I try to keep things balanced. I work out regularly to stay active and clear my mind, and I’m a big fan of TV series and video games, great ways to unwind and also keep the brain sharp. Spending time with my family and friends is something I really value; they keep me grounded and motivated.
-
-                    Overall, I’m someone who’s always looking to improve, stay curious, and take on new challenges—both in tech and in life.
-                </motion.p>
+                    Outside of work, I’m really into sports, gaming, and watching TV shows. it’s how I chill and disconnect a bit. I’m also always looking to learn something new, especially when it comes to front-end or anything dev-related. There’s always something cool to dig into.                </motion.p>
             </motion.div>
         </div>
     );

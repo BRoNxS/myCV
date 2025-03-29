@@ -60,40 +60,61 @@ const CertificationsContent = () => {
                 }`}
             >
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl w-full">
-                    {certifications.map((cert, index) => (
-                        <motion.div
-                            key={`${animationKey}-${cert.id}`}
-                            className="flex flex-col items-center p-4 sm:p-5 md:p-6 rounded-2xl  w-full h-auto cursor-pointer"
-                            initial={{ opacity: 0, y: 50 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.2, duration: 0.4 }}
-                            onAnimationComplete={() => {
-                                if (index === certifications.length - 1) {
-                                    setCertsAnimated(true);
-                                }
-                            }}
-                            onClick={() => handleCertClick(cert)}
-                        >
-                            <img
-                                src={certificationsImages[cert.imageKey]}
-                                alt={cert.title}
-                                className="w-full h-40 sm:h-52 md:h-60 lg:h-64 object-contain rounded-xl"
-                            />
-                            <p className="mt-4 text-sm sm:text-base md:text-lg text-white font-montserrat text-center">
-                                {cert.title}
-                            </p>
-                        </motion.div>
-                    ))}
+                    {certifications.map((cert, index) => {
+                        const isSelected = selectedCert?.id === cert.id;
+                        return (
+                            <motion.div
+                                key={`${animationKey}-${cert.id}`}
+                                className={`relative p-[1px] rounded-md transition-all duration-300 ${
+                                    isSelected
+                                        ? "bg-gradient-to-r from-[#00BFFF] to-[#20C997]"
+                                        : "bg-transparent"
+                                }`}
+                                initial={{opacity: 0, y: 0}}
+                                animate={{opacity: 1, y: 0}}
+                                transition={{delay: index * 0.2, duration: 0.4}}
+                                onAnimationComplete={() => {
+                                    if (index === certifications.length - 1) {
+                                        setCertsAnimated(true);
+                                    }
+                                }}
+                                onClick={() => handleCertClick(cert)}
+                            >
+                                <div
+                                    className={`relative flex flex-col items-center p-4  rounded-md w-full h-[350px] cursor-pointer transition-all duration-300 ${
+                                        isSelected ? "bg-black/80" : "bg-black/60"
+                                    }`}
+                                >
+                                    {isSelected && (
+                                        <span
+                                            className="absolute top-2 right-2 bg-gradient-to-r from-[#00BFFF] to-[#20C997] text-black text-xs px-2 py-1 rounded-md shadow-md font-montserrat">
+            Selected
+        </span>
+                                    )}
+                                    <img
+                                        src={certificationsImages[cert.imageKey]}
+                                        alt={cert.title}
+                                        className="w-full h-52 object-contain mt-10"
+                                    />
+                                    <p className="mt-auto pt-4 text-m sm:text-m md:text-m text-white font-montserrat text-center h-32">
+                                        {cert.title}
+                                    </p>
+                                </div>
+
+                            </motion.div>
+                        );
+                    })}
                 </div>
 
                 <motion.div
                     className="w-full max-w-7xl relative flex items-center justify-center mt-20 px-4 min-h-[64px]"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: certsAnimated ? 1 : 0, y: certsAnimated ? 0 : 20 }}
-                    transition={{ duration: 0.5 }}
+                    initial={{opacity: 0, y: 20}}
+                    animate={{opacity: certsAnimated ? 1 : 0, y: certsAnimated ? 0 : 20}}
+                    transition={{duration: 0.5}}
                 >
-                    <div className="absolute inset-0 h-px bg-gradient-to-r from-[#00BFFF] to-[#20C997]" />
-                    <div className="bg-black px-3 py-1 z-10 -translate-y-8 relative rounded-xl min-h-[40px] flex items-center justify-center">
+                    <div className="absolute inset-0 h-px bg-gradient-to-r from-[#00BFFF] to-[#20C997]"/>
+                    <div
+                        className="bg-black px-3 py-1 z-10 -translate-y-8 relative rounded-xl min-h-[40px] flex items-center justify-center">
                         <span className="text-white font-montserrat text-base sm:text-lg md:text-xl">
                             {selectedCert?.title}
                         </span>
