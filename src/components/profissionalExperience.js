@@ -84,24 +84,28 @@ const ProfessionalExperienceContent = () => {
                     {[...experiences].map((exp, index) => (
                         <motion.div
                             key={index}
-                            className="bg-zinc-950 p-4 rounded-xl shadow-lg w-full"
+                            className="relative p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] shadow-lg w-full"
                             initial="initial"
                             animate="animate"
                             variants={animations.fadeInUp(index * 0.2)}
                         >
-                            <p className="text-lg font-bold mb-5 text-center">
-                                {exp.month ? `${exp.month} ${exp.year}` : exp.year}
-                            </p>
-                            <div className="flex flex-wrap justify-center gap-4 mb-10">
-                                {exp.technologies.map((tech, idx) => (
-                                    <div key={idx} className="flex flex-col items-center w-10 h-10">
-                                        <img src={techIcons[tech.name]} alt={tech.name} className="w-full h-full object-contain" />
-                                        <p className="text-xs mt-1">{tech.name}</p>
-                                    </div>
-                                ))}
+                            <div className="bg-black rounded-[6px] py-6 px-10">
+                                <p className="text-2xl mb-5 text-center font-semibold font-montserrat">
+                                    {exp.month ? `${exp.month} ${exp.year}` : exp.year}
+                                </p>
+                                <div className="flex flex-wrap justify-center gap-4 mb-14">
+                                    {exp.technologies.map((tech, idx) => (
+                                        <div key={idx} className="flex flex-col items-center w-10 h-10 ">
+                                            <img src={techIcons[tech.name]} alt={tech.name}
+                                                 className="w-full h-full object-contain"/>
+                                            <p className="text-xs mt-2 font-montserrat">{tech.name}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                                <p className="text-sm text-center mt-6 font-montserrat">{exp.text}</p>
                             </div>
-                            <p className="text-sm text-center mt-6">{exp.text}</p>
                         </motion.div>
+
                     ))}
                 </div>
             ) : (
@@ -109,15 +113,16 @@ const ProfessionalExperienceContent = () => {
                     {isInstructionVisible && selectedIndex === null && (
                         <motion.p
                             className="text-base sm:text-lg md:text-xl font-montserrat text-white absolute top-2"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.5 }}
+                            initial={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            transition={{delay: 0.5}}
                         >
                             Click on the dots to view the details.
                         </motion.p>
                     )}
 
-                    <div className={`relative w-full max-w-md flex flex-col items-center mt-20 transition-opacity duration-500 ${isSectionVisible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+                    <div
+                        className={`relative w-full max-w-md flex flex-col items-center mt-20 transition-opacity duration-500 ${isSectionVisible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
                         <AnimatePresence>
                             {isTimelineVisible && (
                                 <motion.div
