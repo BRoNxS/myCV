@@ -89,7 +89,7 @@ const ContactsContent = () => {
         >
             <div className="w-full max-w-5xl flex flex-col md:flex-row gap-10">
                 {/* Formulário */}
-                <form onSubmit={handleSubmit} className="relative w-full md:w-2/3 shadow-xl p-4 sm:p-6">
+                <form onSubmit={handleSubmit} className="relative w-full md:w-2/3 pb-0 px-6 pt-6">
                     <div className="flex flex-col md:flex-row w-full gap-6 md:gap-10">
                         <div className="w-full md:w-1/2 flex flex-col gap-4">
                             <div className="relative flex flex-col min-h-[80px]">
