@@ -21,6 +21,7 @@ const CertificationsContent = () => {
     const [selectedCert, setSelectedCert] = useState(null);
     const [animationKey, setAnimationKey] = useState(0);
     const [certsAnimated, setCertsAnimated] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const sectionRef = useRef(null);
 
     useEffect(() => {
@@ -37,6 +38,13 @@ const CertificationsContent = () => {
 
         if (sectionRef.current) observer.observe(sectionRef.current);
         return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
     }, []);
 
     const handleCertClick = (cert) => {
@@ -70,9 +78,9 @@ const CertificationsContent = () => {
                                         ? "bg-gradient-to-r from-[#00BFFF] to-[#20C997]"
                                         : "bg-transparent"
                                 }`}
-                                initial={{opacity: 0, y: 0}}
-                                animate={{opacity: 1, y: 0}}
-                                transition={{delay: index * 0.2, duration: 0.4}}
+                                initial={{ opacity: 0, y: 0 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.2, duration: 0.4 }}
                                 onAnimationComplete={() => {
                                     if (index === certifications.length - 1) {
                                         setCertsAnimated(true);
@@ -81,76 +89,95 @@ const CertificationsContent = () => {
                                 onClick={() => handleCertClick(cert)}
                             >
                                 <div
-                                    className={`relative flex flex-col items-center p-4  rounded-md w-full h-[350px] cursor-pointer transition-all duration-300 ${
+                                    className={`relative flex flex-col items-center p-4 rounded-md w-full cursor-pointer transition-all duration-300 ${
                                         isSelected ? "bg-black/80" : "bg-black/60"
                                     }`}
                                 >
-                                    {isSelected && (
-                                        <span
-                                            className="absolute top-2 right-2 bg-gradient-to-r from-[#00BFFF] to-[#20C997] text-black text-xs px-2 py-1 rounded-md shadow-md font-montserrat">
-            Selected
-        </span>
-                                    )}
                                     <img
                                         src={certificationsImages[cert.imageKey]}
                                         alt={cert.title}
                                         className="w-full h-52 object-contain mt-10"
                                     />
-                                    <p className="mt-auto pt-4 text-m sm:text-m md:text-m text-white font-montserrat text-center h-32">
+                                    <p className="pt-4 text-m sm:text-m md:text-m text-white font-montserrat text-center">
                                         {cert.title}
                                     </p>
-                                </div>
 
+                                    {/* Descrição + Botão (só mobile e se selecionado) */}
+                                    {isMobile && isSelected && (
+                                        <>
+                                            <p className="mt-2 text-white text-sm text-center font-montserrat">
+                                                {cert.description}
+                                            </p>
+                                            <div className="mt-4 p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] w-fit min-h-[24px]">
+                                                <a
+                                                    href={`${process.env.PUBLIC_URL}${cert.downloadLink}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="inline-flex items-center justify-center text-white rounded-md bg-black p-2 sm:p-2.5 transition-all duration-300 hover:bg-black/80"
+                                                    title="Ver certificado"
+                                                >
+                                                    <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+                                                </a>
+                                            </div>
+                                        </>
+                                    )}
+                                </div>
                             </motion.div>
                         );
                     })}
                 </div>
 
-                <motion.div
-                    className="w-full max-w-7xl relative flex items-center justify-center mt-20 px-4 min-h-[64px]"
-                    initial={{opacity: 0, y: 20}}
-                    animate={{opacity: certsAnimated ? 1 : 0, y: certsAnimated ? 0 : 20}}
-                    transition={{duration: 0.5}}
-                >
-                    <div className="absolute inset-0 h-px bg-gradient-to-r from-[#00BFFF] to-[#20C997]"/>
-                    <div
-                        className="bg-black px-3 py-1 z-10 -translate-y-8 relative rounded-xl min-h-[40px] flex items-center justify-center">
-                        <span className="text-white font-montserrat text-base sm:text-lg md:text-xl">
-                            {selectedCert?.title}
-                        </span>
-                    </div>
-                </motion.div>
-
-                <motion.div
-                    key={`desc-${selectedCert?.id}`}
-                    className="relative rounded-2xl shadow-lg max-w-5xl w-full text-center px-4 min-h-[100px]"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: certsAnimated ? 1 : 0, y: certsAnimated ? 0 : 20 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                >
-                    <p className="text-white text-base sm:text-lg leading-relaxed font-montserrat">
-                        {selectedCert?.description}
-                    </p>
-                </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: certsAnimated ? 1 : 0 }}
-                    transition={{ duration: 0.4, delay: 0.1 }}
-                    className="relative mt-6 p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] w-fit min-h-[24px]"
-                >
-                    <a
-                        href={selectedCert ? `${process.env.PUBLIC_URL}${selectedCert.downloadLink}` : "#"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`inline-flex items-center justify-center text-white rounded-md bg-black p-2 sm:p-2.5 transition-all duration-300 ${
-                            certsAnimated ? "hover:bg-black/80" : "opacity-0 pointer-events-none"
-                        }`}
-                        title="Ver certificado"
+                {/* Linha + título central (só em não-mobile) */}
+                {!isMobile && (
+                    <motion.div
+                        className="w-full max-w-7xl relative flex items-center justify-center mt-20 px-4 min-h-[64px]"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: certsAnimated ? 1 : 0, y: certsAnimated ? 0 : 20 }}
+                        transition={{ duration: 0.5 }}
                     >
-                        <Download className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </a>
-                </motion.div>
+                        <div className="absolute inset-0 h-px bg-gradient-to-r from-[#00BFFF] to-[#20C997]" />
+                        <div className="bg-black px-3 py-1 z-10 -translate-y-8 relative rounded-xl min-h-[40px] flex items-center justify-center">
+                            <span className="text-white font-montserrat text-base sm:text-lg md:text-xl">
+                                {selectedCert?.title}
+                            </span>
+                        </div>
+                    </motion.div>
+                )}
+
+                {/* Descrição central (só em não-mobile) */}
+                {!isMobile && (
+                    <motion.div
+                        key={`desc-${selectedCert?.id}`}
+                        className="relative rounded-2xl shadow-lg max-w-5xl w-full text-center px-4 mt-4"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: certsAnimated ? 1 : 0, y: certsAnimated ? 0 : 20 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                    >
+                        <p className="text-white text-base sm:text-lg leading-relaxed font-montserrat">
+                            {selectedCert?.description}
+                        </p>
+                    </motion.div>
+                )}
+
+                {/* Botão de download central (só em não-mobile) */}
+                {!isMobile && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: certsAnimated ? 1 : 0 }}
+                        transition={{ duration: 0.4, delay: 0.1 }}
+                        className="relative mt-6 p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] w-fit min-h-[24px]"
+                    >
+                        <a
+                            href={selectedCert ? `${process.env.PUBLIC_URL}${selectedCert.downloadLink}` : "#"}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center text-white rounded-md bg-black p-2 sm:p-2.5 transition-all duration-300 hover:bg-black/80"
+                            title="Ver certificado"
+                        >
+                            <Download className="w-4 h-4 sm:w-5 sm:h-5" />
+                        </a>
+                    </motion.div>
+                )}
             </motion.div>
         </div>
     );
