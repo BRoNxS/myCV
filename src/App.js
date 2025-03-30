@@ -145,8 +145,8 @@ const App = () => {
             <Section id="aboutMeText" className="h-screen flex flex-col justify-center">
                 <motion.div
                     className="glow-text  flex flex-col items-center text-4xl md:text-6xl lg:text-7xl xl:text-[6rem] 2xl:text-[8rem] font-syncopate">
-                    <motion.span animate={controls.aboutMeLeft} initial={{x: 0, opacity: 1}}>About</motion.span>
-                    <motion.span animate={controls.aboutMeRight} initial={{x: 0, opacity: 1}}>Me</motion.span>
+                    <motion.span animate={controls.aboutMeLeft} initial={{x: 0, opacity: 1}}>BRUNO</motion.span>
+                    <motion.span animate={controls.aboutMeRight} initial={{x: 0, opacity: 1}}>SANTOS</motion.span>
                 </motion.div>
             </Section>
             <AboutMeContent controls={controls}/>

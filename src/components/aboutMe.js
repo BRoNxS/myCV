@@ -66,12 +66,7 @@ const AboutMeContent = () => {
                     </div>
                 </motion.div>
 
-                <motion.h2
-                    variants={textVariants}
-                    className="text-2xl sm:text-3xl md:text-5xl text-white mt-10 font-montserrat font-light"
-                >
-                    Bruno Santos
-                </motion.h2>
+
 
                 <motion.p
                     variants={textVariants}
