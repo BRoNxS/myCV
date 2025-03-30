@@ -88,7 +88,6 @@ const ContactsContent = () => {
             className="relative w-full flex flex-col items-center justify-center min-h-screen font-montserrat bg-black px-4 sm:px-6 md:px-12 py-10"
         >
             <div className="w-full max-w-5xl flex flex-col md:flex-row gap-10">
-                {/* Formulário */}
                 <form onSubmit={handleSubmit} className="relative w-full md:w-2/3 pb-0 px-6 pt-6">
                     <div className="flex flex-col md:flex-row w-full gap-6 md:gap-10">
                         <div className="w-full md:w-1/2 flex flex-col gap-4">
@@ -135,7 +134,6 @@ const ContactsContent = () => {
                             </div>
                         </div>
 
-                        {/* Mensagem */}
                         <div className="relative flex flex-col min-h-[100px] w-full md:w-1/2">
                             <div className="flex items-start h-[150px] border-b border-gray-500 focus-within:border-white pt-4">
                                 <FiMessageSquare
@@ -158,7 +156,6 @@ const ContactsContent = () => {
                         </div>
                     </div>
 
-                    {/* Status */}
                     {status === "success" && (
                         <p className="text-green-400 text-sm mt-6 text-center">Message sent successfully!</p>
                     )}
@@ -168,7 +165,6 @@ const ContactsContent = () => {
                         </p>
                     )}
 
-                    {/* Botão Enviar */}
                     <div className="relative mt-12 p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] w-fit mx-auto sm:mx-0 sm:ml-auto">
                         <button
                             type="submit"
@@ -179,10 +175,8 @@ const ContactsContent = () => {
                     </div>
                 </form>
 
-                {/* Linha horizontal visível apenas em dispositivos pequenos */}
                 <div className="block md:hidden h-px my-2 bg-gradient-to-r from-[#00BFFF] to-[#20C997] w-[90%] mx-auto"/>
 
-                {/* Linha vertical visível apenas em dispositivos médios e maiores */}
                 <div className="hidden md:block w-px bg-gradient-to-b from-[#00BFFF] to-[#20C997]" />
 
                 {/* Contact Info + Socials */}
@@ -196,9 +190,7 @@ const ContactsContent = () => {
                             <a href="tel:+351918432080">+351 918432080</a>
                         </p>
 
-                        {/* Redes sociais com estilo de botão */}
                         <div className="mt-6 flex items-center gap-4">
-                            {/* GitHub */}
                             <a
                                 href="https://github.com/Brun0Sant0s"
                                 target="_blank"
@@ -210,7 +202,6 @@ const ContactsContent = () => {
                                 </div>
                             </a>
 
-                            {/* LinkedIn */}
                             <a
                                 href="https://www.linkedin.com/in/bruno-santos-a8560221a/"
                                 target="_blank"
