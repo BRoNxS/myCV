@@ -82,12 +82,9 @@ const ProfessionalExperienceContent = () => {
             {typeof window !== "undefined" && window.innerWidth < 768 ? (
                 <div className="flex flex-col gap-5 w-full max-w-sm">
                     {[...experiences].map((exp, index) => (
-                        <motion.div
+                        <div
                             key={index}
                             className="relative p-[1px] rounded-md bg-gradient-to-r from-[#00BFFF] to-[#20C997] shadow-lg w-full"
-                            initial="initial"
-                            animate="animate"
-                            variants={animations.fadeInUp(index * 0.2)}
                         >
                             <div className="bg-black rounded-[6px] py-6 px-10">
                                 <p className="text-2xl mb-5 text-center font-semibold font-montserrat">
@@ -95,17 +92,15 @@ const ProfessionalExperienceContent = () => {
                                 </p>
                                 <div className="flex flex-wrap justify-center gap-4 mb-14">
                                     {exp.technologies.map((tech, idx) => (
-                                        <div key={idx} className="flex flex-col items-center w-10 h-10 ">
-                                            <img src={techIcons[tech.name]} alt={tech.name}
-                                                 className="w-full h-full object-contain"/>
+                                        <div key={idx} className="flex flex-col items-center w-10 h-10">
+                                            <img src={techIcons[tech.name]} alt={tech.name} className="w-full h-full object-contain" />
                                             <p className="text-xs mt-2 font-montserrat">{tech.name}</p>
                                         </div>
                                     ))}
                                 </div>
                                 <p className="text-sm text-center mt-6 font-montserrat">{exp.text}</p>
                             </div>
-                        </motion.div>
-
+                        </div>
                     ))}
                 </div>
             ) : (
